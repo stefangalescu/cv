@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-vue-next'
 import { RESUME } from '@/data/resume'
+
+defineRouteRules({
+  isr: true,
+})
 </script>
 
 <template>

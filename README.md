@@ -1,75 +1,44 @@
-# Nuxt 3 Minimal Starter
+# Minimalist CV
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt & Vue port of [Bartosz Jarocki's CV web app](https://github.com/BartoszJarocki/cv) that renders a minimalist CV with a print-friendly layout.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Setup only takes a few minutes [single config file](./data/resume.ts)
+- Built using [Nuxt 3](https://nuxt.com), [Vue 3](https://vuejs.org), [TypeScript](https://www.typescriptlang.org/), [shadcn-vue](https://shadcn-vue.com), [radix-vue](https://www.radix-vue.com/) & [Tailwind CSS](https://tailwindcss.com)
+- Basic SEO via [Nuxt SEO](https://nuxtseo.com/)
+- Optimized images via [Nuxt Image](https://image.nuxt.com/)
+- Optimized & self-hosted fonts via [Nuxt Google Fonts](https://google-fonts.nuxtjs.org/)
+- Vercel Analytics & Vercel Speed Insights (Core Web Vitals)
+- Auto generated layout
+- Responsive for different devices
+- Optimized for Nuxt
+- Deployable anywhere
 
-```bash
-# npm
-npm install
+## Getting started
 
-# pnpm
-pnpm install
+1. Clone this repository to your local machine:
 
-# yarn
-yarn install
+   ```bash
+   git clone https://github.com/stefangalescu/cv.git
+   ```
 
-# bun
-bun install
-```
+2. Move to the cloned directory
 
-## Development Server
+   ```bash
+   cd cv
+   ```
 
-Start the development server on `http://localhost:3000`:
+3. Install dependencies:
 
-```bash
-# npm
-npm run dev
+   ```bash
+   pnpm install
+   ```
 
-# pnpm
-pnpm run dev
+4. Start the local Server:
 
-# yarn
-yarn dev
+   ```bash
+   pnpm dev
+   ```
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+5. Open the [Config file](./data/resume.ts) and make changes

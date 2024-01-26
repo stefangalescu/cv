@@ -50,7 +50,7 @@ defineRouteRules({
         </div>
 
         <UiAvatar class="size-28">
-          <UiAvatarImage :alt="RESUME.name" :src="RESUME.avatarUrl" />
+          <UiAvatarImage :alt="RESUME.name" :src="RESUME.avatarUrl" format="webp" :width="256" :height="256" />
           <UiAvatarFallback>{{ RESUME.initials }}</UiAvatarFallback>
         </UiAvatar>
       </div>

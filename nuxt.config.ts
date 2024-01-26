@@ -35,6 +35,7 @@ export default defineNuxtConfig({
 
   site: {
     name: 'Stefan Galescu | Full Stack Product Engineer',
+    description: 'Full Stack Product Engineer focused on building products with extra attention to detail',
     url: 'https://cv.stefangalescu.com',
   },
 

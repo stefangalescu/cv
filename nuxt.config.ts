@@ -1,5 +1,3 @@
-import { RESUME } from './data/resume'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   experimental: {
@@ -37,7 +35,7 @@ export default defineNuxtConfig({
 
   site: {
     name: 'Stefan Galescu | Full Stack Product Engineer',
-    description: RESUME.about,
+    description: 'Full Stack Product Engineer focused on building products with extra attention to detail',
     url: 'https://cv.stefangalescu.com',
   },
 

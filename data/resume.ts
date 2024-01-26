@@ -86,8 +86,8 @@ export const RESUME = {
       description:
         'Penetration testing tools that make it easy for security teams to discover, exploit and report common vulnerabilities while saving time for custom work and more creative hacking.',
       link: {
-        label: 'statamic.com',
-        href: 'https://statamic.com/addons/stefan-galescu/heroicons',
+        label: 'pentest-tools.com',
+        href: 'https://pentest-tools.com',
       },
     },
     {

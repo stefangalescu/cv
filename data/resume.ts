@@ -6,7 +6,7 @@ export const RESUME = {
   initials: 'SG',
   location: 'Bucharest, Romania, GMT+2',
   locationLink: 'https://www.google.com/maps/place/Bucharest',
-  about: 'Full Stack Product Engineer focused on building products with extra attention to detail',
+  about: 'Full Stack Product Engineer & Technical Lead @ Pentest-Tools.com, focused on enriching the product and developer experience.',
   summary:
     "Designer turned developer with a passion for translating beautifully crafted designs into interactive and accessible web experiences. Right now I'm working on several projects using Nuxt.js/Vue.js, Tailwind CSS and various headless CMS options. Keeping an open mind and learning as much as I can.",
   avatarUrl: 'https://avatars.githubusercontent.com/u/52995748?v=4',

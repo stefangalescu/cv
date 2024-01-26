@@ -25,16 +25,19 @@ defineRouteRules({
           <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
             <UiButton v-if="RESUME.contact.email" class="size-8" variant="outline" size="icon" as-child>
               <a :href="`mailto:${RESUME.contact.email}`">
+                <span class="sr-only">Contact via email</span>
                 <MailIcon class="size-4" />
               </a>
             </UiButton>
             <UiButton v-if="RESUME.contact.tel" class="size-8" variant="outline" size="icon" as-child>
               <a :href="`tel:${RESUME.contact.tel}`">
+                <span class="sr-only">Contact via telephone</span>
                 <PhoneIcon class="size-4" />
               </a>
             </UiButton>
             <UiButton v-for="social in RESUME.contact.social" :key="social.name" class="size-8" variant="outline" size="icon" as-child>
               <a :href="social.url">
+                <span class="sr-only">{{ social.name }}</span>
                 <component :is="social.icon" class="size-4" />
               </a>
             </UiButton>

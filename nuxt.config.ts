@@ -38,6 +38,14 @@ export default defineNuxtConfig({
     url: 'https://cv.stefangalescu.com',
   },
 
+  ogImage: {
+    enabled: false,
+  },
+
+  schemaOrg: {
+    enabled: false,
+  },
+
   shadcn: {
     /**
      * Prefix for all the imported component

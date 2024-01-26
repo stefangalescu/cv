@@ -1,0 +1,158 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "reportUnusedDisableDirectives": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    }
+  },
+  "plugins": ["unicorn"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:unicorn/recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.cjs"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.mts", "*.cts", "*.vue"],
+      "rules": {
+        // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
+        // does not work with type definitions.
+        "no-unused-vars": "off",
+        // '@typescript-eslint/no-unused-vars': 'warn',
+        "@typescript-eslint/no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
+
+        // https://github.com/typescript-eslint/typescript-eslint/blob/1cf9243/docs/getting-started/linting/FAQ.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+        "no-undef": "off",
+
+        "no-redeclare": "off",
+        "@typescript-eslint/no-redeclare": "error"
+      }
+    },
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "constructor-super": "off", // ts(2335) & ts(2377)
+        "getter-return": "off", // ts(2378)
+        "no-const-assign": "off", // ts(2588)
+        "no-dupe-args": "off", // ts(2300)
+        "no-dupe-class-members": "off", // ts(2393) & ts(2300)
+        "no-dupe-keys": "off", // ts(1117)
+        "no-func-assign": "off", // ts(2539)
+        "no-import-assign": "off", // ts(2539) & ts(2540)
+        "no-new-symbol": "off", // ts(7009)
+        "no-obj-calls": "off", // ts(2349)
+        "no-redeclare": "off", // ts(2451)
+        "no-setter-return": "off", // ts(2408)
+        "no-this-before-super": "off", // ts(2376)
+        "no-undef": "off", // ts(2304)
+        "no-unreachable": "off", // ts(7027)
+        "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
+        "no-var": "error", // ts transpiles let/const to var, so no need for vars any more
+        "prefer-const": "error", // ts provides better types with const
+        "prefer-rest-params": "error", // ts provides better types with rest args over arguments
+        "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
+        "valid-typeof": "off" // ts(2367)
+      }
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "fixStyle": "inline-type-imports"
+      }
+    ],
+
+    "import/order": "error",
+    "import/first": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-unresolved": "off",
+
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+          "props": true
+        },
+        "ignore": ["Ref$", "Refs$", "Props$"]
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true,
+          "camelCase": true,
+          "pascalCase": true
+        }
+      }
+    ],
+
+    "vue/eqeqeq": "error",
+    "vue/require-name-property": "warn",
+    "vue/multi-word-component-names": "off",
+    "vue/require-default-prop": "off",
+    "vue/component-name-in-template-casing": "error",
+    "vue/no-empty-component-block": "warn",
+    "vue/object-curly-spacing": ["error", "always"],
+    "vue/padding-line-between-blocks": "error",
+    "vue/space-infix-ops": "error",
+    "vue/space-unary-ops": "error",
+    "vue/v-on-function-call": "error",
+    "vue/html-button-has-type": "error",
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always",
+          "normal": "any",
+          "component": "always"
+        }
+      }
+    ],
+    "vue/block-lang": [
+      "error",
+      {
+        "script": {
+          "lang": "ts"
+        }
+      }
+    ],
+    "vue/component-api-style": ["error", ["script-setup", "composition"]],
+    "vue/no-unused-refs": "error",
+    "vue/prefer-prop-type-boolean-first": "error",
+    "vue/no-ref-object-destructure": "error",
+    "vue/no-lifecycle-after-await": "error",
+    "vue/no-ref-as-operand": "error",
+    "vue/no-watch-after-await": "error",
+    "vue/require-toggle-inside-transition": "error",
+    "vue/require-explicit-emits": "error",
+    "vue/no-v-for-template-key": "off",
+    "vue/no-v-model-argument": "off",
+    "vue/no-multiple-template-root": "off"
+  }
+}

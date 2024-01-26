@@ -1,5 +1,5 @@
 import { GithubIcon, LinkedinIcon, XIcon } from 'lucide-vue-next'
-import PentestToolsLogo from '@/components/logos/PentestTools.vue'
+import PentestToolsLogo from '../components/logos/PentestTools.vue'
 
 export const RESUME = {
   name: 'Stefan Galescu',
